@@ -31,9 +31,7 @@ collections:
     create: true
     fields:
       - { name: type, label: Type, widget: hidden, default: 'doc' }
-      - { name: section, label: Section, widget: "relation",
-      collection: "sections", searchFields: ["title", "section"],
-      valueField: "section", displayFields: ["title"]}
+      - { name: section, label: Section, widget: "relation", collection: "sections", searchFields: ["title", "section"], valueField: "section", displayFields: ["title"]}
       - { name: path, label: Path, hint: "Absolute uri, starting with /docs/<section>/", pattern: ['^/docs/.*', "Must be absolute uri, starting with /docs/<section>/"] }
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
