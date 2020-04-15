@@ -1,0 +1,41 @@
+backend:
+name: git-gateway
+
+media_folder: docs/img
+public_folder: ./img/
+
+collections:
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "Home Page"
+        name: "index"
+        file: "src/pages/index.md"
+        fields:
+        - { name: type, label: Type, widget: hidden, default: 'page' }
+        - { name: page, label: Page, widget: hidden, default: 'index' }
+        - { name: body, label: Body, widget: markdown }
+  - name: sections
+    label: Sections
+    folder: docs/sections
+    create: true
+    fields:
+      - { name: type, label: Type, widget: hidden, default: 'section' }
+      - { name: title, label: Title }
+      - { name: section, label: Section }
+      - { name: order, label: Order, widget: "number", valueType: "int", min: 0 }
+      - { name: body, label: Body, widget: markdown }
+  - name: docs
+    label: Documents
+    folder: docs
+    create: true
+    fields:
+      - { name: type, label: Type, widget: hidden, default: 'doc' }
+      - { name: section, label: Section, widget: "relation",
+      collection: "sections", searchFields: ["title", "section"],
+      valueField: "section", displayFields: ["title"]}
+      - { name: path, label: Path, hint: "Absolute uri, starting with /docs/<section>/", pattern: ['^/docs/.*', "Must be absolute uri, starting with /docs/<section>/"] }
+      - { name: date, label: Date, widget: datetime }
+      - { name: title, label: Title }
+      - { name: order, label: Order, widget: "number", valueType: "int", min: 0 }
+      - { name: body, label: Body, widget: markdown }
