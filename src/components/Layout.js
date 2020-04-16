@@ -72,7 +72,8 @@ export default ({ children }) => {
             </Container>
           </Content>
           <Footer className={classes.footer} >
-            <CopyrightIcon /> <img src={AcnLogo} height='24px' align='bottom' alt="Accenture Technology" ></img>
+          Il contenuto di questo sito, www.speleocluborobico.org, di proprietà dello Speleo Club Orobico, è distribuito con
+Licenza Creative Commons Attribuzione - Non commerciale - Condividi allo stesso modo 4.0 Internazionale. Per saperne di più leggi la nostra informativa.
           </Footer>
         </>
       )}
