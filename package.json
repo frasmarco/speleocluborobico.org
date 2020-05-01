@@ -11,7 +11,9 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "@material-ui/core": "^4.9.10",
@@ -39,7 +41,8 @@
     "react-helmet": "^5.2.1",
     "redux": "^4.0.5",
     "typescript": "^3.8.3",
-    "utf-8-validate": "^5.0.2"
+    "utf-8-validate": "^5.0.2",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
@@ -50,5 +53,6 @@
   },
   "bugs": {
     "url": "https://github.com/frasmarco/speleocluborobico.org/issues"
-  }
+  },
+  "snyk": true
 }
