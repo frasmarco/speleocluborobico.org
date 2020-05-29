@@ -19,7 +19,7 @@
     "@mui-treasury/layout": "^3.3.4",
     "@mui-treasury/mockup": "^1.0.1",
     "bufferutil": "^4.0.1",
-    "codemirror": "^5.52.2",
+    "codemirror": "^5.54.0",
     "gatsby": "^2.20.20",
     "gatsby-plugin-netlify": "^2.2.1",
     "gatsby-plugin-netlify-cms": "^4.2.2",
